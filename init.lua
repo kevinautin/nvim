@@ -19,4 +19,4 @@ map_ai_move("[m", "f", "prev", "Jump to prev function")
 map_ai_move("]m", "f", "next", "Jump to next function")
 
 -- Automatically reload files changed outside vim
-vim.cmd("set autoread | au CursorHold * checktime")
+-- vim.cmd("set autoread | au CursorHold * checktime")
