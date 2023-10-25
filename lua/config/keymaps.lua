@@ -17,6 +17,8 @@ local function map(mode, lhs, rhs, opts)
     vim.keymap.set(mode, lhs, rhs, opts)
   end
 end
+-- Delete a keymap
+-- vim.keymap.del(mode, lhs, opts)
 
 -- Neogit
 map("n", "<leader>gn", require("neogit").open, { desc = "Neogit" })
@@ -35,3 +37,9 @@ map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", { desc = "GitSigns Sel
 -- Telescope
 map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "commits" })
 map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "status" })
+
+-- Better movements
+map({ "n", "o", "x" }, "gl", "$", { desc = "End of line" })
+map({ "n", "o", "x" }, "gh", "^", { desc = "Start of line" })
+map({ "n", "o", "x" }, "gj", "G", { desc = "End of file" })
+map({ "n", "o", "x" }, "gk", "gg", { desc = "Start of file" })

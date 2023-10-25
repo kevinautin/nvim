@@ -21,8 +21,11 @@ return {
 
       local luasnip = require("luasnip")
       local cmp = require("cmp")
+      -- cmp.mapping.complete({ reason = cmp.ContextReason.Manual })
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
       opts.completion = {
+        autocomplete = { "InsertEnter", "TextChanged" },
+        keyword_length = 0,
         completeopt = "menu,menuone,noinsert,noselect,preview",
       }
 
