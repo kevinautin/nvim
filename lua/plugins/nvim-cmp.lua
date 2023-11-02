@@ -40,6 +40,7 @@ return {
           elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
           elseif has_words_before() then
+            -- elseif true then
             cmp.complete()
           else
             fallback()

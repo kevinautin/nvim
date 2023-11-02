@@ -36,7 +36,7 @@ map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", { desc = "GitSigns Sel
 
 -- Telescope
 map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "commits" })
-map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "status" })
+-- map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "status" })
 
 -- Better movements
 map({ "n", "o", "x" }, "gl", "$", { desc = "End of line" })

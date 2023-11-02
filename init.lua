@@ -35,8 +35,19 @@ vim.api.nvim_create_autocmd("BufEnter", {
 --   callback = function()
 --     local cmp = require("cmp")
 --     local current_line = vim.fn.getline(vim.fn.line("."))
+--     require("lazy.util").info("test")
 --     if current_line:match("^%s+$") and not cmp.visible() then
+--       require("lazy.util").info("test2")
 --       cmp.complete({ reason = "manual" })
 --     end
 --   end,
 -- })
+local augroup = vim.api.nvim_create_augroup("cmp_auto_at_the_beginning_of_line", { clear = true })
+vim.api.nvim_create_autocmd("CursorMovedI", {
+  pattern = "*",
+  group = augroup,
+  callback = function()
+    local cmp = require("cmp")
+    cmp.complete({ reason = "manual" })
+  end,
+})
