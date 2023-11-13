@@ -2,9 +2,7 @@
 require("config.lazy")
 
 local opt = vim.opt
-opt.clipboard = "unnamedplus"
 opt.scrolloff = 200 -- Lines of context
-opt.wrap = false -- Disable line wrap
 
 -- mini.ai moves
 local map_ai_move = function(lhs, textobject_id, direction, desc)

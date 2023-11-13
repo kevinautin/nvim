@@ -43,3 +43,7 @@ map({ "n", "o", "x" }, "gl", "$", { desc = "End of line" })
 map({ "n", "o", "x" }, "gh", "^", { desc = "Start of line" })
 map({ "n", "o", "x" }, "gj", "G", { desc = "End of file" })
 map({ "n", "o", "x" }, "gk", "gg", { desc = "Start of file" })
+
+-- Oil
+-- map({ "n", "o", "x" }, "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+map({ "n", "o", "x" }, "<leader>fo", "<CMD>Oil<CR>", { desc = "Open parent directory" })
