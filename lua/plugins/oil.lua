@@ -6,7 +6,7 @@ return {
       use_as_default_explorer = true,
       keymaps = {
         ["g?"] = "actions.show_help",
-        -- ["<CR>"] = "actions.select",
+        ["<CR>"] = "actions.select",
         ["l"] = "actions.select",
         -- ["<C-s>"] = "actions.select_vsplit",
         -- ["<C-h>"] = "actions.select_split",

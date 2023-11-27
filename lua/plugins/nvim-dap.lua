@@ -78,7 +78,7 @@ return {
         desc = "Continue",
       },
       {
-        "<leader>dd",
+        "<C-d>",
         function()
           require("dap").terminate()
         end,
