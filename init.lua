@@ -40,12 +40,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 --     end
 --   end,
 -- })
-local augroup = vim.api.nvim_create_augroup("cmp_auto_at_the_beginning_of_line", { clear = true })
-vim.api.nvim_create_autocmd("CursorMovedI", {
-  pattern = "*",
-  group = augroup,
-  callback = function()
-    local cmp = require("cmp")
-    cmp.complete({ reason = "manual" })
-  end,
-})
+-- local augroup = vim.api.nvim_create_augroup("cmp_auto_at_the_beginning_of_line", { clear = true })
+-- vim.api.nvim_create_autocmd("CursorMovedI", {
+--   pattern = "*",
+--   group = augroup,
+--   callback = function()
+--     local cmp = require("cmp")
+--     cmp.complete({ reason = "manual" })
+--   end,
+-- })
