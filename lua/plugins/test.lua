@@ -6,7 +6,18 @@ return {
     },
     opts = {
       adapters = {
-        "neotest-jest",
+        -- "neotest-jest",
+        -- ["neotest-jest"] = {
+        --   args = { "--detectOpenHandles", "--forceExit" },
+        -- },
+        ["neotest-jest"] = {
+          jestCommand = "npm run jesttest",
+          jestConfigFile = "custom.jest.config.ts",
+          env = { CI = true },
+          cwd = function(path)
+            return vim.fn.getcwd()
+          end,
+        },
       },
       status = { virtual_text = true },
       output = { open_on_run = true },
