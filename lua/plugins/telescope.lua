@@ -8,7 +8,7 @@ return {
         "<cmd>Telescope buffers sort_mru=true<cr>",
         desc = "Switch Buffer",
       },
+      -- ...
     },
-    -- ...
   },
 }
